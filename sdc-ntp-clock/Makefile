@@ -14,7 +14,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/sdc-ntp-clock
   TITLE:=SDC Ntp Clock
   DEPENDS:=@TARGET_ramips_mt7688_LinkIt7688 \
-  			+ntpd +ntpdate
+  			+ntpd
   HIDDEN:=1
   CATEGORY:=Base system
   DEFAULT:=y

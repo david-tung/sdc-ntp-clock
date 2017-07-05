@@ -1,6 +1,3 @@
-# Put your custom commands here that should be executed once
-# the system init finished. By default this file does nothing.
-
 /etc/init.d/sysntpd disable
 
 ifconfig br-wan:0 10.10.6.10 netmask 255.255.255.0 broadcast 10.10.6.255 up
