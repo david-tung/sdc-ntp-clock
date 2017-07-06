@@ -13,15 +13,20 @@ config switch
 	option reset '1'
 	option enable_vlan '0'
 
-config interface 'wan'
+config interface 'w1'
 	option proto 'dhcp'
-	option _orig_ifname 'apcli0'
-	option _orig_bridge 'true'
-	option type 'bridge'
 	option ifname 'eth0'
 
-config interface 'wwan'
-	option type 'bridge'
+config interface 'w2'
 	option proto 'dhcp'
-	option ifname 'apcli0'
+	option _orig_ifname 'apcli0'
+	option _orig_bridge 'false'
+	option type 'bridge'
+	option ifname 'apcli0 ra0'
+
+config interface 'w0'
+	option proto 'static'
+	option ifname 'eth0'
+	option ipaddr '10.10.6.10'
+	option netmask '255.255.255.0'
 

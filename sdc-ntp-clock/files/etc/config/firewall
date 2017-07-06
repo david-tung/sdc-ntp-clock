@@ -19,7 +19,7 @@ config zone
 	option masq '1'
 	option mtu_fix '1'
 	option input 'ACCEPT'
-	option network 'wan wan6'
+	option network 'wan wan6 w1 w2 w0'
 
 config forwarding
 	option src 'lan'

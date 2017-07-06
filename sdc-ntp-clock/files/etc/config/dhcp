@@ -23,7 +23,6 @@ config dhcp 'lan'
 	option leasetime '12h'
 	option dhcpv6 'server'
 	option ra 'server'
-	option ignore '0'
 
 config dhcp 'wan'
 	option interface 'wan'
@@ -33,4 +32,8 @@ config odhcpd 'odhcpd'
 	option maindhcp '0'
 	option leasefile '/tmp/hosts/odhcpd'
 	option leasetrigger '/usr/sbin/odhcpd-update'
+
+config dhcp 'w0'
+	option interface 'w0'
+	option ignore '1'
 
